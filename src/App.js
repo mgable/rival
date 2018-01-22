@@ -22,11 +22,13 @@ class App extends Component {
 
   render() {
     return (
-      <ul className="App">
-        {this.state.data.map((item) => {
-          return <li>{item}</li>
-        })}
-      </ul>
+      <div className="App">
+        <ul>
+          {this.state.data.map((item) => {
+            return <li key={item}>{item}</li>
+          })}
+        </ul>
+      </div>
     );
   }
 }
